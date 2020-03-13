@@ -4,7 +4,8 @@ from tkinter import *
 window=Tk()
 
 def km_to_miles():
-    print("Success")
+    miles = float(e1_value.get())*1.6
+    t1.insert(END,miles)
 
 #actually puts button in window
 #b1.pack()
@@ -14,8 +15,10 @@ b1=Button(window,text="Execute",command=km_to_miles)
 b1.grid(row=0,column=0)
 
 
+
 #Entry gives us text fields for input
-e1=Entry(window)
+e1_value=StringVar()
+e1=Entry(window,textvariable=e1_value)
 e1.grid(row=0,column=1)
 
 #Text gives us text field as well with height and width
