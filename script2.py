@@ -5,6 +5,7 @@ window=Tk()
 def kg_to_pounds():
     pounds = float(e1_value.get())*2.2
     t1.insert(END,pounds)
+    print("Did I make it")
 
 b1=Button(window,text="convert",command=kg_to_pounds)
 b1.grid(row=0,column=3)
